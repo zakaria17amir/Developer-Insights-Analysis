@@ -1,85 +1,78 @@
-**Project: Developer Insights Analysis**
+# Developer Insights Analysis
 
-Overview
+Exploratory data analysis of a global developer survey — uncovering trends in job satisfaction, remote work, programming language adoption, and compensation using Python.
 
-This project explores various aspects of developers' professional lives using survey data. The analyses cover job satisfaction, remote work trends, programming language popularity, and salary insights. The goal is to derive meaningful insights that can aid industry professionals in understanding key trends and correlations in the tech workforce.
+---
 
-Dataset
+## 📌 Overview
 
-The dataset used in this analysis consists of survey responses from developers worldwide. It includes information about coding experience, job satisfaction, employment types, programming languages, and compensation.
+This project analyses survey responses from thousands of developers worldwide to extract meaningful patterns about the tech workforce. The goal is to answer real questions that developers, hiring managers, and researchers actually care about — using clean, reproducible Python analysis.
 
-Tasks and Analysis Performed
+**Key questions explored:**
+- Does more experience lead to higher job satisfaction?
+- Which job roles are most associated with remote work?
+- What are the most popular programming languages by region?
+- How does education level relate to employment type?
+- Who are the highest earners, and what do they have in common?
 
-1. Relationship Between Professional Experience and Job Satisfaction
+---
 
-Analyzed the relationship between years of professional coding experience (YearsCodePro) and job satisfaction (JobSat).
+## 🛠 Tech Stack
 
-Created a scatter plot to visualize the correlation between YearsCodePro and JobSat.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat&logo=python&logoColor=white)
 
-2. Job Satisfaction Distribution
+---
 
-Generated a count plot to show the distribution of JobSat values and understand general job satisfaction levels among respondents.
+## 📊 Analyses Performed
 
-3. Trends in Remote Work Based on Job Roles
+| # | Analysis | Method |
+|---|---|---|
+| 1 | Experience vs Job Satisfaction | Scatter plot, correlation |
+| 2 | Job Satisfaction Distribution | Count plot |
+| 3 | Remote Work Trends by Job Role | Grouped bar chart |
+| 4 | Programming Language Popularity by Region | Frequency analysis |
+| 5 | Education Level vs Employment Type | Cross-tabulation |
+| 6 | Industry Distribution of Respondents | Bar chart |
+| 7 | High Compensation Identification | Percentile filtering |
+| 8 | Compensation Correlation (outlier-cleaned) | Correlation heatmap |
 
-Analyzed remote work trends using the RemoteWork and Employment columns.
+---
 
-Examined if specific job roles have a stronger preference for remote work compared to others.
+## 📁 Project Structure
 
-4. Popularity of Programming Languages by Region
+```
+Developer-Insights-Analysis/
+├── analysis.ipynb        # Main Jupyter Notebook
+├── data/
+│   └── survey_results.csv
+├── outputs/
+│   └── *.png             # Generated charts
+└── README.md
+```
 
-Investigated the most commonly used programming languages in different regions using the LanguageHaveWorkedWith column.
+---
 
-Provided insights into regional variations in programming language preferences.
+## 🚀 How to Run
 
-5. Education Background and Employment Type
+```bash
+# Clone the repo
+git clone https://github.com/zakaria17amir/Developer-Insights-Analysis.git
+cd Developer-Insights-Analysis
 
-Explored how different education levels (EdLevel) relate to employment types (Employment).
+# Install dependencies
+pip install pandas matplotlib seaborn jupyter
 
-Used cross-tabulation and visualizations to determine whether higher education correlates with specific employment types.
+# Launch notebook
+jupyter notebook analysis.ipynb
+```
 
-6. Industry-Wise Distribution of Respondents
+---
 
-Examined the distribution of respondents across various industries to identify which sectors employ the most developers.
+## 🔮 Future Work
 
-7. Identification of High Compensation Respondents
-
-Identified respondents with extremely high yearly compensation.
-
-Analyzed the distribution of high-earning respondents to understand salary trends in different job roles and experience levels.
-
-8. Correlation and Outlier Removal in Compensation Data
-
-Investigated correlations between yearly compensation (ConvertedCompYearly), work experience (WorkExp), and job satisfaction (JobSat).
-
-Removed outliers to ensure accurate correlation analysis and visualization.
-
-Visualization Techniques Used
-
-Scatter plots
-
-Count plots
-
-Cross-tabulation visualizations
-
-Correlation heatmaps
-
-Tools & Technologies
-
-Python (Pandas, Matplotlib, Seaborn)
-
-Data Visualization Libraries
-
-Data Cleaning & Analysis Techniques
-
-Conclusion
-
-This project provides a detailed exploration of developer job trends, satisfaction, and compensation insights. The findings help industry professionals, researchers, and policymakers better understand the evolving dynamics of the tech workforce.
-
-Future Work
-
-Further refine analysis by segmenting data based on additional factors like company size and job role.
-
-Incorporate machine learning models to predict job satisfaction based on various attributes.
-
-Expand salary analysis by considering additional economic factors like cost of living and country-wise salary adjustments.
+- Segment analysis by company size and job seniority
+- Build a predictive model for job satisfaction using scikit-learn
+- Expand salary analysis with cost-of-living adjustments by country
